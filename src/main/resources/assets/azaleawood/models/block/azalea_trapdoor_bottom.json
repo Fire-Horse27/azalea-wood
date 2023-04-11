@@ -1,0 +1,6 @@
+{
+  "parent": "azaleawood:block/az_template_orientable_trapdoor_bottom",
+  "textures": {
+    "texture": "azaleawood:block/azalea_trapdoor"
+  }
+}

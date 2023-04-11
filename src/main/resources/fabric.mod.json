@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "azaleawood",
+  "version": "${version}",
+
+  "name": "Azalea Wood Set",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "FireSteed"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.firesteed.azaleawood.AzaleaWood"
+    ],
+    "client": [
+      "net.firesteed.azaleawood.AzaleaWoodClient"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "fabric-api": "*",
+    "minecraft": "~1.19.3",
+    "java": ">=17",
+    "terraform-wood-api-v1": ">=5.0.0"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

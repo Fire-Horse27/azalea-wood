@@ -1,0 +1,7 @@
+{
+  "parent": "azaleawood:block/az_door_bottom_right",
+  "textures": {
+    "bottom": "azaleawood:block/azalea_door_bottom",
+    "top": "azaleawood:block/azalea_door_top"
+  }
+}
