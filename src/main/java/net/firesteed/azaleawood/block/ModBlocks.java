@@ -18,26 +18,33 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
+    /*this.name = string;
+        this.soundType = blockSoundGroup;
+        this.doorClose = soundEvent;
+        this.doorOpen = soundEvent2;
+        this.trapdoorClose = soundEvent3;
+        this.trapdoorOpen = soundEvent4;
+        this.pressurePlateClickOff = soundEvent5;
+        this.pressurePlateClickOn = soundEvent6;
+        this.buttonClickOff = soundEvent7;
+        this.buttonClickOn = soundEvent8;*/
+
+    public static final BlockSetType AZALEA = new BlockSetType("azalea");
     public static final Block AZALEA_BUTTON = registerBlock("azalea_button",
-            new ButtonBlock(FabricBlockSettings.copy(Blocks.OAK_BUTTON), 30, true,
-                    SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_OFF, SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_ON),
+            new ButtonBlock(FabricBlockSettings.copy(Blocks.OAK_BUTTON), AZALEA, 30, true),
             ItemGroups.BUILDING_BLOCKS);
     public static final Block AZALEA_PRESSURE_PLATE = registerBlock("azalea_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
-                    FabricBlockSettings.copy(Blocks.OAK_PRESSURE_PLATE),
-                    SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_OFF,
-                    SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_ON), ItemGroups.BUILDING_BLOCKS);
+                    FabricBlockSettings.copy(Blocks.OAK_PRESSURE_PLATE), AZALEA), ItemGroups.BUILDING_BLOCKS);
 
     public static final Block AZALEA_TRAPDOOR = registerBlock("azalea_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR), SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE,
-                    SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN), ItemGroups.BUILDING_BLOCKS);
+            new TrapdoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR), AZALEA), ItemGroups.BUILDING_BLOCKS);
     public static final Block AZALEA_DOOR = registerBlock("azalea_door",
-            new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR), SoundEvents.BLOCK_WOODEN_DOOR_CLOSE,
-                    SoundEvents.BLOCK_WOODEN_DOOR_OPEN), ItemGroups.BUILDING_BLOCKS);
+            new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR), AZALEA), ItemGroups.BUILDING_BLOCKS);
 
+    public static final WoodType AZALEA_TYPE = new WoodType("azalea", AZALEA);
     public static final Block AZALEA_FENCE_GATE = registerBlock("azalea_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.copy(Blocks.OAK_FENCE_GATE),
-                    SoundEvents.BLOCK_FENCE_GATE_CLOSE, SoundEvents.BLOCK_FENCE_GATE_OPEN), ItemGroups.BUILDING_BLOCKS);
+            new FenceGateBlock(FabricBlockSettings.copy(Blocks.OAK_FENCE_GATE), AZALEA_TYPE), ItemGroups.BUILDING_BLOCKS);
     public static final Block AZALEA_FENCE = registerBlock("azalea_fence",
             new FenceBlock(FabricBlockSettings.copy(Blocks.OAK_FENCE)), ItemGroups.BUILDING_BLOCKS);
 
