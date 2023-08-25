@@ -13,7 +13,7 @@
     "sources": "https://github.com/Fire-Horse27/azalea-wood"
   },
 
-  "license": "MIT",
+  "license": "LGPL-3.0",
   "icon": "assets/modid/icon.png",
 
   "environment": "*",
