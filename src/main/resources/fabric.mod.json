@@ -12,8 +12,8 @@
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/azalea-wood-set",
     "sources": "https://github.com/Fire-Horse27/azalea-wood"
   },
-
-  "license": "LGPL-v3.0",
+  
+  "license": "LGPL-3.0",
   "icon": "assets/modid/icon.png",
 
   "environment": "*",
