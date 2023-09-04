@@ -30,16 +30,29 @@ public class ModItems {
     public static final Item AZALEA_SIGN = registerItem("azalea_sign", new SignItem(
             new FabricItemSettings().maxCount(16), ModBlocks.AZALEA_SIGN, ModBlocks.AZALEA_WALL_SIGN));
     public static final Item AZALEA_HANGING_SIGN = registerItem("azalea_hanging_sign", new HangingSignItem(
-            ModBlocks.AZALEA_HANGING_SIGN, ModBlocks.AZALEA_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
+            ModBlocks.AZALEA_HANGING_SIGN, ModBlocks.AZALEA_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)
+            .requires(FeatureFlags.UPDATE_1_20)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(AzaleaWood.MOD_ID, name), item);
     }
 
     public static void addItemsToItemGroup() {
+        addItemsToItemGroup(ItemGroups.TOOLS, Items.MANGROVE_CHEST_BOAT, AZALEA_BOAT);
+        addItemsToItemGroup(ItemGroups.TOOLS, ModItems.AZALEA_BOAT, AZALEA_CHEST_BOAT);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
-            entries.addAfter(Items.MANGROVE_HANGING_SIGN, AZALEA_SIGN);
+            if (entries.getEnabledFeatures().contains(FeatureFlags.UPDATE_1_20)) {
+                entries.addAfter(Items.MANGROVE_HANGING_SIGN, AZALEA_SIGN);
+            }
+            else {
+                entries.addAfter(Items.MANGROVE_SIGN, AZALEA_SIGN);
+            }
         });
+        addItemsToItemGroup(ItemGroups.FUNCTIONAL, ModItems.AZALEA_SIGN, AZALEA_HANGING_SIGN);
+    }
+
+    public static void addItemsToItemGroup(ItemGroup group, Item after, Item item) {
+        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.addAfter(after, item));
     }
 
     public static void registerModItems() {
