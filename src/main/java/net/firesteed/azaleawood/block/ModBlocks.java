@@ -29,21 +29,21 @@ public class ModBlocks {
 
     public static final BlockSetType AZALEA = new BlockSetType("azalea");
     public static final Block AZALEA_BUTTON = registerBlock("azalea_button",
-            new ButtonBlock(FabricBlockSettings.copy(Blocks.OAK_BUTTON), AZALEA, 30, true));
+            new ButtonBlock(AZALEA, 30, FabricBlockSettings.copy(Blocks.OAK_BUTTON)));
     public static final Block AZALEA_PRESSURE_PLATE = registerBlock("azalea_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
-                    FabricBlockSettings.copy(Blocks.OAK_PRESSURE_PLATE).mapColor(MapColor.TERRACOTTA_GRAY), AZALEA));
+            new PressurePlateBlock(
+                    AZALEA, FabricBlockSettings.copy(Blocks.OAK_PRESSURE_PLATE).mapColor(MapColor.TERRACOTTA_GRAY)));
 
     public static final Block AZALEA_TRAPDOOR = registerBlock("azalea_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR).mapColor(MapColor.TERRACOTTA_GRAY),
-                    AZALEA));
+            new TrapdoorBlock(AZALEA,
+                    FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR).mapColor(MapColor.TERRACOTTA_GRAY)));
     public static final Block AZALEA_DOOR = registerBlock("azalea_door",
-            new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR).mapColor(MapColor.TERRACOTTA_GRAY), AZALEA));
+            new DoorBlock(AZALEA, FabricBlockSettings.copy(Blocks.OAK_DOOR).mapColor(MapColor.TERRACOTTA_GRAY)));
 
     public static final WoodType AZALEA_TYPE = new WoodType("azalea", AZALEA);
     public static final Block AZALEA_FENCE_GATE = registerBlock("azalea_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.copy(Blocks.OAK_FENCE_GATE).mapColor(MapColor.TERRACOTTA_GRAY),
-                    AZALEA_TYPE));
+            new FenceGateBlock(AZALEA_TYPE,
+                    FabricBlockSettings.copy(Blocks.OAK_FENCE_GATE).mapColor(MapColor.TERRACOTTA_GRAY)));
     public static final Block AZALEA_FENCE = registerBlock("azalea_fence",
             new FenceBlock(FabricBlockSettings.copy(Blocks.OAK_FENCE).mapColor(MapColor.TERRACOTTA_GRAY)));
 
