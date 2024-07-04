@@ -1,0 +1,23 @@
+{
+  "block.azaleawood.azalea_log": "Азалієва колода",
+  "block.azaleawood.azalea_wood": "Азалієва деревина",
+  "block.azaleawood.stripped_azalea_log": "Обтесана азалієва колода",
+  "block.azaleawood.stripped_azalea_wood": "Обтесана азалієва деревина",
+  "block.azaleawood.azalea_planks": "Азалієві дошки",
+  "block.azaleawood.azalea_stairs": "Азалієві сходи",
+  "block.azaleawood.azalea_slab": "Азалієва плита",
+  "block.azaleawood.azalea_fence": "Азалієвий паркан",
+  "block.azaleawood.azalea_fence_gate": "Азалієва хвіртка",
+  "block.azaleawood.azalea_trapdoor": "Азалієвий люк",
+  "block.azaleawood.azalea_door": "Азалієві двері",
+  "block.azaleawood.azalea_sign": "Азалієва табличка",
+  "block.azaleawood.azalea_wall_sign": "Азалієва настінна табличка",
+  "block.azaleawood.azalea_hanging_sign": "Азалієва вивіска",
+  "block.azaleawood.azalea_wall_hanging_sign": "Азалієва настінна вивіска",
+  "block.azaleawood.azalea_pressure_plate": "Азалієва натискна плита",
+  "block.azaleawood.azalea_button": "Азалієва кнопка",
+  "item.azaleawood.azalea_boat": "Азалієвий човен",
+  "item.azaleawood.azalea_chest_boat": "Азалієвий човен зі скринею",
+  "item.azaleawood.azalea_sign": "Азалієва табличка",
+  "item.azaleawood.azalea_hanging_sign": "Азалієва вивіска"
+}
