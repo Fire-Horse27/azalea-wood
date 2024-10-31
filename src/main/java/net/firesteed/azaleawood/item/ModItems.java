@@ -23,7 +23,7 @@ public class ModItems {
                         new TerraformBoatItem(BOAT_KEY,
                         true, new Item.Settings().maxCount(1)));
     public static final Item AZALEA_SIGN = registerItem("azalea_sign", new SignItem(
-            new Item.Settings().maxCount(16), ModBlocks.AZALEA_SIGN, ModBlocks.AZALEA_WALL_SIGN));
+            ModBlocks.AZALEA_WALL_SIGN, ModBlocks.AZALEA_SIGN, new Item.Settings().maxCount(16)));
     public static final Item AZALEA_HANGING_SIGN = registerItem("azalea_hanging_sign", new HangingSignItem(
             ModBlocks.AZALEA_HANGING_SIGN, ModBlocks.AZALEA_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
 
