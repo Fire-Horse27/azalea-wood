@@ -28,8 +28,8 @@
   "depends": {
     "fabricloader": ">=0.15.10",
     "fabric-api": "*",
-    "minecraft": ">=1.21.2",
+    "minecraft": ">=1.21.4",
     "java": ">=21",
-    "terraform-wood-api-v1": ">=11.0.0"
+    "terraform-wood-api-v1": ">=13.0.0-alpha.1"
   }
 }
