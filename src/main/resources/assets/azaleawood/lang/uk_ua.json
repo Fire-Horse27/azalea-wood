@@ -19,5 +19,6 @@
   "item.azaleawood.azalea_boat": "Азалієвий човен",
   "item.azaleawood.azalea_chest_boat": "Азалієвий човен зі скринею",
   "item.azaleawood.azalea_sign": "Азалієва табличка",
-  "item.azaleawood.azalea_hanging_sign": "Азалієва вивіска"
+  "item.azaleawood.azalea_hanging_sign": "Азалієва вивіска",
+  "entity.azaleawood.azalea_chest_boat": "Азалієвий човен зі скринею"
 }

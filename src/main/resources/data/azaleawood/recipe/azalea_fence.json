@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_fence",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "azaleawood:azalea_planks"
-    }
+    "#": "minecraft:stick",
+    "W": "azaleawood:azalea_planks"
   },
   "pattern": [
     "W#W",

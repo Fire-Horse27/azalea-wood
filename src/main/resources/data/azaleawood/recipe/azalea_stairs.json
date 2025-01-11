@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_stairs",
   "key": {
-    "#": {
-      "item": "azaleawood:azalea_planks"
-    }
+    "#": "azaleawood:azalea_planks"
   },
   "pattern": [
     "#  ",

@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_button",
   "ingredients": [
-    {
-      "item": "azaleawood:azalea_planks"
-    }
+    "azaleawood:azalea_planks"
   ],
   "result": {
     "id": "azaleawood:azalea_button"

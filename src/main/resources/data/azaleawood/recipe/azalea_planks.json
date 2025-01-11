@@ -3,9 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    {
-      "tag": "minecraft:azalea_logs"
-    }
+    "#minecraft:azalea_logs"
   ],
   "result": {
     "count": 4,

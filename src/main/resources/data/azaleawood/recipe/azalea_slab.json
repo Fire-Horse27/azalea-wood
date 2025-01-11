@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_slab",
   "key": {
-    "#": {
-      "item": "azaleawood:azalea_planks"
-    }
+    "#": "azaleawood:azalea_planks"
   },
   "pattern": [
     "###"

@@ -19,6 +19,6 @@
   "item.azaleawood.azalea_boat": "Azalea Boat",
   "item.azaleawood.azalea_chest_boat": "Azalea Boat with Chest",
   "item.azaleawood.azalea_sign": "Azalea Sign",
-  "item.azaleawood.azalea_hanging_sign": "Azalea Hanging Sign"
-
+  "item.azaleawood.azalea_hanging_sign": "Azalea Hanging Sign",
+  "entity.azaleawood.azalea_chest_boat": "Azalea Boat with Chest"
 }
