@@ -67,9 +67,7 @@ public class ModBlocks {
                 Identifier.of(AzaleaWood.MOD_ID, path));
 
         final Block block = Blocks.register(registryKey, factory, settings);
-        if (!path.contains("sign")) {
-            Items.register(block);
-        }
+        Items.register(block);
         return block;
     }
 
