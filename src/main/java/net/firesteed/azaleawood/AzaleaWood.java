@@ -39,12 +39,10 @@ public class AzaleaWood implements ModInitializer {
             entries.addAfter(ModBlocks.AZALEA_PRESSURE_PLATE, ModBlocks.AZALEA_BUTTON);
         });
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
-            entries.addAfter(Blocks.CHERRY_LOG, ModBlocks.AZALEA_LOG);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries ->
+                entries.addAfter(Blocks.CHERRY_LOG, ModBlocks.AZALEA_LOG));
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
-            entries.addAfter(Blocks.CHERRY_HANGING_SIGN, ModBlocks.AZALEA_SIGN, ModBlocks.AZALEA_HANGING_SIGN);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries ->
+                entries.addAfter(Blocks.CHERRY_HANGING_SIGN, ModBlocks.AZALEA_SIGN, ModBlocks.AZALEA_HANGING_SIGN));
     }
 }
