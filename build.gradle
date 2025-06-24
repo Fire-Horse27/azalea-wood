@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.8.+'
+	id 'fabric-loom' version '1.10-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -32,7 +32,7 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	include (modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:13.0.0-alpha.2")
+	include (modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:15.0.0-alpha.3")
 
 	// Uncomment the following line to enable the deprecated Fabric API modules. 
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
@@ -41,6 +41,7 @@ dependencies {
 
 processResources {
 	inputs.property "version", project.version
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
 	filesMatching("fabric.mod.json") {
 		expand "version": project.version
