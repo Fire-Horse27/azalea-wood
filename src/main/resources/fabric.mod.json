@@ -1,35 +1,41 @@
 {
-  "schemaVersion": 1,
-  "id": "azaleawood",
-  "version": "${version}",
-
-  "name": "Azalea Wood Set",
-  "description": "A simple mod to add the azalea wood set in its entirety to the game!",
-  "authors": [
-    "Fire-Horse27"
-  ],
-  "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/azalea-wood-set",
-    "sources": "https://github.com/Fire-Horse27/azalea-wood"
-  },
-  
-  "license": "LGPL-3.0",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.firesteed.azaleawood.AzaleaWood"
-    ],
-    "client": [
-      "net.firesteed.azaleawood.AzaleaWoodClient"
-    ]
-  },
-
-  "depends": {
-    "fabricloader": ">=0.15.10",
-    "fabric-api": "*",
-    "minecraft": ">=1.21.6",
-    "java": ">=21",
-    "terraform-wood-api-v1": ">=15.0.0-alpha.3"
-  }
+	"schemaVersion": 1,
+	"id": "template",
+	"version": "${version}",
+	"name": "template",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/template/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"fire_horse27.template.Template"
+		],
+		"client": [
+			"fire_horse27.template.TemplateClient"
+		],
+		"fabric-datagen": [
+			"fire_horse27.template.TemplateDataGenerator"
+		]
+	},
+	"mixins": [
+		"template.mixins.json",
+		{
+			"config": "template.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.5",
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
 }
