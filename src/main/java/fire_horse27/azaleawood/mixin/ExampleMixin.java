@@ -1,4 +1,4 @@
-package fire_horse27.template.mixin;
+package fire_horse27.azaleawood.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,41 +1,42 @@
 {
 	"schemaVersion": 1,
-	"id": "template",
+	"id": "azaleawood",
 	"version": "${version}",
-	"name": "template",
+	"name": "azaleawood",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Fire-Horse27"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/template/icon.png",
+	"license": "GPL-3.0",
+	"icon": "assets/azaleawood/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"fire_horse27.template.Template"
+			"fire_horse27.azaleawood.AzaleaWood"
 		],
 		"client": [
-			"fire_horse27.template.TemplateClient"
+			"fire_horse27.azaleawood.AzaleaWoodClient"
 		],
 		"fabric-datagen": [
-			"fire_horse27.template.TemplateDataGenerator"
+			"fire_horse27.azaleawood.AzaleaWoodDataGenerator"
 		]
 	},
 	"mixins": [
-		"template.mixins.json",
+		"azaleawood.mixins.json",
 		{
-			"config": "template.client.mixins.json",
+			"config": "azaleawood.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
 		"fabricloader": ">=0.18.5",
-		"minecraft": "~26.1",
+		"minecraft": ">=26.1",
 		"java": ">=25",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"terraform-wood-api-v1": ">=17.0.0-alpha.5"
 	}
 }
