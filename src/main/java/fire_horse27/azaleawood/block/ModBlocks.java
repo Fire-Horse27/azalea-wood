@@ -85,7 +85,7 @@ public class ModBlocks {
             p -> new ButtonBlock(AZALEA, 30, p), buttonProperties());
 
     public static final Block AZALEA_SHELF = register("azalea_shelf", ShelfBlock::new,
-            BlockBehaviour.Properties.of().mapColor(AZALEA_PLANKS.defaultMapColor()));
+            BlockBehaviour.Properties.ofFullCopy(CHERRY_SHELF).mapColor(AZALEA_PLANKS.defaultMapColor()));
 
     private static Block register(
             String id,
