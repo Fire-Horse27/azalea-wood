@@ -25,13 +25,6 @@
 			"fire_horse27.azaleawood.AzaleaWoodDataGenerator"
 		]
 	},
-	"mixins": [
-		"azaleawood.mixins.json",
-		{
-			"config": "azaleawood.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.18.5",
 		"minecraft": ">=26.1",

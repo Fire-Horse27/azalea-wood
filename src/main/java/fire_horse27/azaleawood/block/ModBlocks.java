@@ -4,10 +4,15 @@ import com.terraformersmc.terraform.sign.api.block.TerraformSignBlockHelper;
 import fire_horse27.azaleawood.AzaleaWood;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -28,16 +33,15 @@ public class ModBlocks {
             logProperties(MapColor.TERRACOTTA_GRAY, MapColor.RAW_IRON, SoundType.CHERRY_WOOD));
     public static final Block AZALEA_WOOD = register("azalea_wood", RotatedPillarBlock::new,
             BlockBehaviour.Properties.ofFullCopy(CHERRY_WOOD).mapColor(MapColor.RAW_IRON));
-    public static final Block STRIPPED_AZALEA_LOG = register(
-            "stripped_azalea_log", RotatedPillarBlock::new, logProperties(MapColor.TERRACOTTA_GRAY,
-                    MapColor.TERRACOTTA_GRAY, SoundType.CHERRY_WOOD)
-    );
+    public static final Block STRIPPED_AZALEA_LOG = register("stripped_azalea_log", RotatedPillarBlock::new,
+            logProperties(MapColor.TERRACOTTA_GRAY, MapColor.TERRACOTTA_GRAY, SoundType.CHERRY_WOOD));
     public static final Block STRIPPED_AZALEA_WOOD = register("stripped_azalea_wood", RotatedPillarBlock::new,
             BlockBehaviour.Properties.ofFullCopy(STRIPPED_CHERRY_WOOD).mapColor(MapColor.TERRACOTTA_GRAY));
 
-    public static final Block AZALEA_PLANKS = register("azalea_planks",
+    public static final Block AZALEA_PLANKS = register("azalea_planks", Block::new,
             BlockBehaviour.Properties.ofFullCopy(CHERRY_PLANKS).mapColor(MapColor.TERRACOTTA_GRAY));
     public static final Block AZALEA_STAIRS = register("azalea_stairs",
+            p -> new StairBlock(AZALEA_PLANKS.defaultBlockState(), p),
             BlockBehaviour.Properties.ofFullCopy(AZALEA_PLANKS));
     public static final Block AZALEA_SLAB = register("azalea_slab", SlabBlock::new,
             BlockBehaviour.Properties.ofFullCopy(CHERRY_SLAB).mapColor(MapColor.TERRACOTTA_GRAY));
@@ -80,20 +84,37 @@ public class ModBlocks {
     public static final Block AZALEA_BUTTON = register("azalea_button",
             p -> new ButtonBlock(AZALEA, 30, p), buttonProperties());
 
-    private static Block register(final String id, final Function<BlockBehaviour.Properties, Block> factory,
-                                  final BlockBehaviour.Properties properties) {
-        return net.minecraft.world.level.block.Blocks.register(blockID(id), factory, properties);
-    }
+    public static final Block AZALEA_SHELF = register("azalea_shelf", ShelfBlock::new,
+            BlockBehaviour.Properties.of().mapColor(AZALEA_PLANKS.defaultMapColor()));
 
-    private static Block register(final String id, final BlockBehaviour.Properties properties) {
-        return register(id, Block::new, properties);
-    }
+    private static Block register(
+            String id,
+            Function<BlockBehaviour.Properties, Block> factory,
+            BlockBehaviour.Properties properties
+    ) {
+        Identifier identifier = Identifier.fromNamespaceAndPath(MOD_ID, id);
 
-    private static ResourceKey<Block> blockID(final String name) {
-        return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MOD_ID, name));
+        // Create block
+        Block block = factory.apply(properties.setId(ResourceKey.create(Registries.BLOCK, identifier)));
+
+        // Create item
+        BlockItem item = new BlockItem(block,
+                new Item.Properties()
+                        .setId(ResourceKey.create(Registries.ITEM, identifier))
+                        .useBlockDescriptionPrefix()
+        );
+
+        // Register both
+        Registry.register(BuiltInRegistries.BLOCK, identifier, block);
+        Registry.register(BuiltInRegistries.ITEM, identifier, item);
+        item.registerBlocks(Item.BY_BLOCK, item);
+
+        return block;
     }
 
     public static void registerModBlocks() {
         AzaleaWood.LOGGER.debug("Registering ModBlocks for " + MOD_ID);
+
+        BlockEntityType.SHELF.addValidBlock(AZALEA_SHELF);
     }
 }

@@ -6,6 +6,6 @@ import net.fabricmc.api.ClientModInitializer;
 public class AzaleaWoodClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		//TerraformBoatClientHelper.registerModelLayers(AzaleaWood.CUSTOM_BOATS_ID);
+		TerraformBoatClientHelper.registerModelLayers(AzaleaWood.AZALEA_BOATS_ID);
 	}
 }
