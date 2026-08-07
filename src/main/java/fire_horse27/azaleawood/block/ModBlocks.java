@@ -12,7 +12,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -114,7 +113,6 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         AzaleaWood.LOGGER.debug("Registering ModBlocks for " + MOD_ID);
-
-        BlockEntityType.SHELF.addValidBlock(AZALEA_SHELF);
+        //BlockEntityType.SHELF.addValidBlock(AZALEA_SHELF);
     }
 }

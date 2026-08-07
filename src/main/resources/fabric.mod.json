@@ -26,10 +26,10 @@
 		]
 	},
 	"depends": {
-		"fabricloader": ">=0.18.5",
-		"minecraft": ">=26.1",
+		"fabricloader": ">=0.19.3",
+		"minecraft": ">=26.2",
 		"java": ">=25",
 		"fabric-api": "*",
-		"terraform-wood-api-v1": ">=17.0.0-alpha.5"
+		"terraform-wood-api-v1": ">=17.0.0-beta.5"
 	}
 }
