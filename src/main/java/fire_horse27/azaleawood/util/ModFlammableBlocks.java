@@ -17,5 +17,7 @@ public class ModFlammableBlocks {
         registry.add(ModBlocks.AZALEA_SLAB, 5, 20);
         registry.add(ModBlocks.AZALEA_FENCE, 5, 20);
         registry.add(ModBlocks.AZALEA_FENCE_GATE, 5, 20);
+
+        registry.add(ModBlocks.AZALEA_SHELF, 30,20);
     }
 }
