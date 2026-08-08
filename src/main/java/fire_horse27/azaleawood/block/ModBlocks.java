@@ -6,6 +6,8 @@ import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.BlockFamilies;
+import net.minecraft.data.BlockFamily;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
@@ -98,6 +100,23 @@ public class ModBlocks {
     public static final Block AZALEA_SHELF = register("azalea_shelf", ShelfBlock::new,
             BlockBehaviour.Properties.ofFullCopy(CHERRY_SHELF).mapColor(AZALEA_PLANKS.defaultMapColor()));
 
+    public static final BlockFamily AZALEA_FAMILY = BlockFamilies.familyBuilder(AZALEA_PLANKS)
+            .log(AZALEA_LOG)
+            .strippedLog(STRIPPED_AZALEA_LOG)
+            .button(AZALEA_BUTTON)
+            .fence(AZALEA_FENCE)
+            .fenceGate(AZALEA_FENCE_GATE)
+            .hangingSign(AZALEA_HANGING_SIGN, AZALEA_WALL_HANGING_SIGN)
+            .pressurePlate(AZALEA_PRESSURE_PLATE)
+            .sign(AZALEA_SIGN, AZALEA_WALL_SIGN)
+            .slab(AZALEA_SLAB)
+            .stairs(AZALEA_STAIRS)
+            .door(AZALEA_DOOR)
+            .trapdoor(AZALEA_TRAPDOOR)
+            .recipeGroupPrefix("wooden")
+            .recipeUnlockedBy("has_planks")
+            .getFamily();
+    
     private static Block register(
             String id,
             Function<BlockBehaviour.Properties, Block> factory,
