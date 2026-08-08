@@ -141,5 +141,7 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         AzaleaWood.LOGGER.debug("Registering ModBlocks for " + MOD_ID);
+
+        BlockEntityTypes.SHELF.addValidBlock(AZALEA_SHELF);
     }
 }
