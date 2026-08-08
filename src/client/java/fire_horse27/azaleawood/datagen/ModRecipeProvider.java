@@ -29,7 +29,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             public void buildRecipes() {
                 FeatureFlagSet enabledFeatures = FeatureFlagSet.of(FeatureFlags.VANILLA);
                 generateRecipes(ModBlocks.AZALEA_FAMILY, enabledFeatures);
-                planksFromLogs(ModBlocks.AZALEA_PLANKS, ModItemTags.AZALEA_LOGS, 4);
                 woodFromLogs(ModBlocks.AZALEA_WOOD, ModBlocks.AZALEA_LOG);
                 woodFromLogs(ModBlocks.STRIPPED_AZALEA_WOOD, ModBlocks.STRIPPED_AZALEA_LOG);
                 woodenBoat(ModItems.AZALEA_BOAT, ModBlocks.AZALEA_PLANKS);
