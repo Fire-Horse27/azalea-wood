@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "azaleawood:block/azalea_planks",
-    "side": "azaleawood:block/azalea_planks",
-    "top": "azaleawood:block/azalea_planks"
-  }
-}
