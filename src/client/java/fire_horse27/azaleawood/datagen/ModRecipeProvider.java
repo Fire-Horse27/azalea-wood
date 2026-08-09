@@ -3,17 +3,14 @@ package fire_horse27.azaleawood.datagen;
 import fire_horse27.azaleawood.AzaleaWood;
 import fire_horse27.azaleawood.block.ModBlocks;
 import fire_horse27.azaleawood.item.ModItems;
-import fire_horse27.azaleawood.tag.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 
 import java.util.concurrent.CompletableFuture;
 
