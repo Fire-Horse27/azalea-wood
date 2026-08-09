@@ -17,7 +17,7 @@ public class ModVillagerTradeKeyTagProvider extends FabricTagsProvider<VillagerT
 
     @Override
     public void addTags(HolderLookup.Provider registries) {
-        this.tag(VillagerTradeTags.WANDERING_TRADER_COMMON)
+        this.tag(VillagerTradeTags.WANDERING_TRADER_UNCOMMON)
                 .add(ModVillagerTrades.WANDERING_TRADER_EMERALD_AZALEA_LOG);
     }
 
