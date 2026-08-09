@@ -4,6 +4,7 @@ import fire_horse27.azaleawood.block.ModBlocks;
 import fire_horse27.azaleawood.item.ModItems;
 import fire_horse27.azaleawood.util.ModFlammableBlocks;
 import fire_horse27.azaleawood.util.ModStrippableBlocks;
+import fire_horse27.azaleawood.villager.ModVillagerTrades;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.resources.Identifier;
