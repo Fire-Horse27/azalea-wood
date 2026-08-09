@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "azaleawood:block/azalea_wall_sign",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "azaleawood:block/azalea_wall_sign",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "azaleawood:block/azalea_wall_sign"
+    },
+    "facing=west": {
+      "model": "azaleawood:block/azalea_wall_sign",
+      "y": 90
+    }
+  }
+}

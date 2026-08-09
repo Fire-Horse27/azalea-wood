@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_wall_hanging_sign",
+  "textures": {
+    "all": "azaleawood:block/azalea_hanging_sign",
+    "particle": "azaleawood:block/stripped_azalea_log"
+  }
+}
