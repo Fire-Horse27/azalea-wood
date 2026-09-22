@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "azaleawood:azalea_fence"
+        "recipes": "azaleawood:azalea_fence"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

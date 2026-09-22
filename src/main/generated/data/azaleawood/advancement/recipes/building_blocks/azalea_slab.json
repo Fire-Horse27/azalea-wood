@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "azaleawood:azalea_slab"
+        "recipes": "azaleawood:azalea_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
