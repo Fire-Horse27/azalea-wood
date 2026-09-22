@@ -10,6 +10,12 @@ import net.minecraft.world.entity.vehicle.boat.ChestRaft;
 import net.minecraft.world.entity.vehicle.boat.Raft;
 import net.minecraft.world.item.Item;
 
+/*
+ * Original code by gniftygnome, used under GPLv3.
+ * Licensed under the GNU General Public License v3.0
+ * Modified by Fire_Horse27 – variable names adjusted.
+ */
+
 /**
  * Read-only access interface for boat data records used by the boat API to register boats.
  * Provides access to identifiers and entity types.

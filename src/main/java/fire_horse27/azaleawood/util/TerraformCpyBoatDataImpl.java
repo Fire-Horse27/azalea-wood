@@ -15,6 +15,12 @@ import net.minecraft.world.entity.vehicle.boat.Raft;
 import net.minecraft.world.item.Item;
 import org.jspecify.annotations.Nullable;
 
+/*
+ * Original code by gniftygnome, used under GPLv3.
+ * Licensed under the GNU General Public License v3.0
+ * Modified by Fire_Horse27 – variable names adjusted.
+ */
+
 public record TerraformCpyBoatDataImpl(Identifier id, @Nullable EntityType<Boat> boatEntityType, @Nullable EntityType<ChestBoat> chestBoatEntityType, @Nullable EntityType<Raft> raftEntityType, @Nullable EntityType<ChestRaft> chestRaftEntityType) implements TerraformCpyBoatData {
     private static final Map<Identifier, TerraformCpyBoatDataImpl> BOAT_DATA = new ConcurrentHashMap<>();
 

@@ -22,6 +22,12 @@ import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+/*
+ * Original code by gniftygnome, used under GPLv3.
+ * Licensed under the GNU General Public License v3.0
+ * Modified by Fire_Horse27 – variable names adjusted.
+ */
+
 public final class TerraformCpyBoatItemHelperImpl {
     @SuppressWarnings("UnnecessaryReturnStatement")
     private TerraformCpyBoatItemHelperImpl() {

@@ -12,6 +12,12 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 
+/*
+ * Original code by gniftygnome, used under GPLv3.
+ * Licensed under the GNU General Public License v3.0
+ * Modified by Fire_Horse27 – variable names adjusted.
+ */
+
 public final class TerraformCpyBoatClientHelperImpl {
     @SuppressWarnings("UnnecessaryReturnStatement")
     private TerraformCpyBoatClientHelperImpl() {
